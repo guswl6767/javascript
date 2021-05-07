@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		let tag = document.createElement('h1') //h1태그 만들기
+		let tagText = document.createTextNode("Hello")
+//		console.log(tag)
+//		console.log(tagText)
+		tag.appendChild(tagText)
+		document.body.appendChild(tag)//body에 자식노드로 붙여주는 것 (h1태그를) 그래서 화면에 hello가 나옴
+		
+		let imgTag = document.createElement('img')
+		imgTag.src = "https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png"
+//		console.log(imgTag)
+		
+		aTag = document.createElement('a')
+		//aTag.href = 'http://www.daum.net'
+		aTag.setAttribute('href', 'http://www.daum.net') //setattribute 는 href나 src같은거 넣어줌 콤마하고 뒤에 태그주소값넣기가능
+		aTag.setAttribute('target', '_blank')
+		
+		aTag.appendChild(imgTag)
+		document.body.appendChild(aTag)
+		
+		console.log(aTag)
+		
+	}
+</script>
+</head>
+<body>
+	<!-- <h1>Hello</h1>
+	<img src="https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png"> -->
+	
+</body>
+</html>
+
+
+
+
+
+
+

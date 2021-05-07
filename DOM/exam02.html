@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		
+		//var id = document.getElementById('id') id뽑아내기
+		var id = document.querySelector('#id')//원하는 형태로 뽑아낼수있음 id class tag  다 완료 queryselectorall 은 안에있는거 다 뽑음(배열의 형태로)
+		//console.log(id)
+		id.innerHTML = '아이디'
+	
+		var password = document.querySelector('.pwd')
+		password.innerText = '패스워드'
+	}
+
+</script>
+</head>
+<body>
+	<table border="1" style="width:100px; height: 100px">
+		<tr>
+			<td id="id">아이디</td>
+		</tr>
+		<tr>
+			<td class="pwd">PASSWORD</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
