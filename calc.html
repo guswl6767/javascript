@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+#display {
+  text-align:right;
+}
+
+</style>
+<script type="text/javascript">
+
+   
+   function add(char) {
+	  
+	  var display = document.getElementById('display'); 
+	  
+	  if(char != "=") {
+	     display.value += char;  // 자판화면에 숫자 나타나기 (display.value)
+	  
+	  } else {
+		  
+		  display.value = eval(display.value)
+	  }
+	  
+  }
+
+
+
+
+
+</script>
+</head>
+<body> 
+    <form>
+       <div align="center">
+       <table border="1" style="width:400px; height:250px;" >
+       	<tr>
+			<td colspan="4">
+			<input type="text" id="display" >
+			</td>
+			
+		</tr>
+		<tr align="center">
+			<td onclick="add(7)">7</td>
+			<td onclick="add(8)">8</td>
+			<td onclick="add(9)">9</td>
+			<td onclick="add('/')">/</td>
+			
+			
+		</tr>
+		<tr align="center">
+			<td onclick="add(4)">4</td>
+			<td onclick="add(5)">5</td>
+			<td onclick="add(6)">6</td>
+			<td onclick="add('*')">*</td>
+			
+		</tr>
+		<tr align="center">
+			<td onclick="add(1)">1</td>
+			<td onclick="add(2)">2</td>
+			<td onclick="add(3)">3</td>
+			<td onclick="add('-')">-</td>
+			
+		</tr>
+		<tr align="center">
+			<td onclick="add('0')">0</td>
+			<td onclick="add('.')">.</td>
+			<td onclick="add('+')">+</td>
+			<td onclick="add('%')">%</td>
+			
+			
+		</tr>
+		<tr align="center">
+			<td colspan="2" onclick="add('=')">=</td>
+			<td colspan="2" onclick="Clear">AC</td>
+			
+			
+		</tr>
+	</table>
+       
+       </div>
+       </form>
+</body>
+</html>
